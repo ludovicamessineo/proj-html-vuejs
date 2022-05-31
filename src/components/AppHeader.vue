@@ -14,7 +14,10 @@
 
 <script>
 export default {
-
+    name: 'AppHeader',
+    props: {
+        menu: Object
+    }
 }
 </script>
 

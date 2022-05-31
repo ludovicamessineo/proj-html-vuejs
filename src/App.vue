@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <AppHeader />
+    <AppHeader/>
     <AppMain />
     <AppFooter />
   </div>
@@ -17,6 +17,44 @@ export default {
     AppHeader,
     AppMain,
     AppFooter
+  },
+  data() {
+    return {
+      listMenu: [
+        {
+          text: "Home",
+          active: true,
+        },
+        {
+          text: "Courses",
+          active: false,
+        },
+        {
+          text: "About Us",
+          active: false,
+        },
+        {
+          text: "News",
+          active: false,
+        },
+        {
+          text: "Pages",
+          active: false,
+        },
+        {
+          text: "Collectibles",
+          active: false,
+        },
+        {
+          text: "Contact",
+          active: false,
+        },
+        {
+          text: "Purchase",
+          active: false,
+        },
+      ],
+    }
   }
 }
 </script>

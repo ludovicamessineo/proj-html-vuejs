@@ -1,5 +1,29 @@
+// BOOTSTRAP
 @import "~bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;800&display=swap');
 
+// COMMON
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.ms_container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.ms_mt {
+    margin-top: 5rem;
+}
+
+.ms_btn {
+    background-color: #e9d758;
+    border: #e9d758;
+    color: white;
+    border-radius: 20px;
+    padding: .8rem 1.2rem;
+    font-size: .7rem;
+}
 
 img {
     width: 100%;
