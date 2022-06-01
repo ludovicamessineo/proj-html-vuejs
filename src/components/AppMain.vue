@@ -74,20 +74,50 @@
                       <p> {{item.price}} </p>
                   </div>
               </div>
+
+              <div class="row m-3">
+                  <div class="col">
+                      <img class="icon" :src="require('../assets/Exam-icon.png')" alt="">
+                      <h3>The most efficient examination method</h3>
+                      <p>EduPrime has gathered teachers from around the globe to brainstorm in order to facilitate the evaluation of our students. Every teacher from our university has an influence on how students are evaluated at his/her subject.</p>
+                      <button class="ms_btn-red">Discover the Method</button>
+                  </div>
+                  <div class="col">
+                      <img :src="require('../assets/Exam-Illustration.png')" alt="">
+                  </div>
+              </div>
+
+              <div class="row m-5">
+                  <div class="col">
+                      <img :src="require('../assets/Girl-Illustration.png')" alt="">
+                  </div>
+                  <div class="col">
+                      <img class="icon" :src="require('../assets/Exam-icon.png')" alt="">
+                      <h3>Variable fees for international students</h3>
+                      <p>EduPrime has gathered teachers from around the globe to brainstorm in order to facilitate the evaluation of our students. Every teacher from our university has an influence on how students are evaluated at his/her subject.</p>
+                      <button class="ms_btn-red">List of Fees</button>
+                  </div>
+              </div>
           </div>
       </section>
+
+      <AppCta />
+
+
   </main>
 </template>
 
 <script>
 import AppSectionText from './AppSectionText.vue'
 import AppSectionImg from './AppSectionImg.vue'
+import AppCta from './AppCta.vue'
 
 export default {
     name: 'AppMain',
     components: {
         AppSectionText,
-        AppSectionImg
+        AppSectionImg,
+        AppCta
     },
     data() {
        return {
