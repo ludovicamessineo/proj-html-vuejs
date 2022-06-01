@@ -13,12 +13,21 @@ body {
 }
 
 .ms_mt {
-    margin-top: 5rem;
+    margin-top: 7rem;
 }
 
 .ms_btn {
     background-color: #e9d758;
     border: #e9d758;
+    color: white;
+    border-radius: 20px;
+    padding: .8rem 1.2rem;
+    font-size: .7rem;
+}
+
+.ms_btn-red {
+    background-color: #e56768;
+    border: #e56768;
     color: white;
     border-radius: 20px;
     padding: .8rem 1.2rem;
@@ -31,4 +40,9 @@ img {
 
 li {
     list-style: none;
+}
+
+.icon {
+    width: 3rem;
+    margin-bottom: 1rem;
 }

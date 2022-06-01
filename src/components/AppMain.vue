@@ -1,11 +1,14 @@
 <template>
   <main>
+      <!-- BANNER -->
       <section class="first-banner">
           <div class="ms_container">
              <h2>Key for your success</h2>
              <p>EduPrime is the most versatile WordPress theme for educational purposes, showcasing universities, courses, secondary schools etc.</p>
           </div>
       </section>
+      <!-- /BANNER -->
+
 
       <section >
           <AppSectionText />
@@ -24,16 +27,42 @@
             
           </div>
       </section>
+
+      <section> 
+          <AppSectionImg />
+      </section>
+
+      <section class="events ms_mt">
+          <div class="ms_container">
+              <div class="uni-graphic">
+                  <img class="icon" :src="require('../assets/Clock-and-Bell.png')" alt="">  
+                  <h2>University Year</h2>  
+                  <img :src="require('../assets/Timeline-Item.png')" alt="">                
+              </div>
+
+              <div class="uni-events">
+                  <img class="icon" :src="require('../assets/upcoming-events-calendar-icon.png')" alt="">
+                  <h2>Upcoming Events</h2>
+                  <div class="row">
+                      <div class="col-4">
+                          <h4>Coaching Sessions</h4>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
   </main>
 </template>
 
 <script>
 import AppSectionText from './AppSectionText.vue'
+import AppSectionImg from './AppSectionImg.vue'
 
 export default {
     name: 'AppMain',
     components: {
-        AppSectionText
+        AppSectionText,
+        AppSectionImg
     },
     data() {
        return {
@@ -70,6 +99,7 @@ export default {
 </script>
 
 <style>
+    /* SECTION 1 */
     .first-banner {
         height: 500px;
         background-image: url(../assets/theme_slider2_bg-1.jpg);
@@ -92,8 +122,25 @@ export default {
         width: 100%;
         height: 100%;
     }
+    /* /SECTION 1 */
+
+    /* SECTION 3 */
+    .course-card > li {
+        padding: 1.4rem 2rem;
+        font-size: .8rem;
+        border: 1px solid lightgrey;
+        color: #e56768;
+    }
 
     .course-card img {
         width: 5rem;
+        padding-bottom: .5rem;
+    }
+    /* /SECTION 3 */
+
+
+    .events {
+        background-color: #e56768;
+        text-align: center;
     }
 </style>

@@ -5,8 +5,10 @@
     </div>
     <div class="header-menu">
         <ul class="d-flex align-items-center">
-            <li>Home</li>
-            <li>Courses</li>
+            <li
+            v-for="(item, index) in listMenu" 
+            :key="index"
+            ><a href=""> {{menu.text}} </a></li>
         </ul>
     </div>
   </div>
@@ -16,7 +18,7 @@
 export default {
     name: 'AppHeader',
     props: {
-        menu: Object
+        menu: Array
     }
 }
 </script>
