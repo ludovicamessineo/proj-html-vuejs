@@ -147,11 +147,7 @@ export default {
                    text: "Graphic",
                    active: false
                }
-           ]
-       } 
-    },
-    data() {
-        return {
+           ],
             coachingCard: [
                 {
                     title: "Coaching Session",
@@ -168,11 +164,7 @@ export default {
                     date: "12 Feb 13.30 PM",
                     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor[...]"  
                 }
-            ]
-        }
-    },
-    data() {
-        return {
+            ],
             courseCard: [
                 {
                     img: "Decisions-icon.png",
