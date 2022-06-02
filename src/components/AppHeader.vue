@@ -3,13 +3,14 @@
     <div class="header-logo">
         <img :src="require('../assets/theme_eduprime_logo.png')" alt="">
     </div>
-    <div class="header-menu">
+    <div class="header-menu d-flex">
         <ul class="d-flex align-items-center">
             <li
-            v-for="(item, index) in listMenu" 
+            v-for="(item, index) in menu" 
             :key="index"
-            ><a href=""> {{menu.text}} </a></li>
+            ><a href=""> {{item.text}} </a></li>
         </ul>
+        <button class="ms_btn text-uppercase">View Courses</button>
     </div>
   </div>
 </template>
@@ -40,6 +41,13 @@ export default {
 
     ul {
         margin: 0;
+
+        li {
+            padding: .4rem;
+            font-size: .8rem;
+            font-weight: 800;
+            color: white;
+        }
     }
 }
 </style>

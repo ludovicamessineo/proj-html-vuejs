@@ -1,4 +1,5 @@
 <template>
+<section>
   <div class="courses ms_container ms_mt">
       <div class="row">
           <div class="col col-text">
@@ -12,6 +13,8 @@
           </div>
       </div>
   </div>
+
+</section>
 </template>
 
 <script>

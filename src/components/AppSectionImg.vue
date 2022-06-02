@@ -21,7 +21,6 @@ export default {
 
 <style lang="scss" scoped>
     .col-img > img {
-        width: 12rem;
-        padding: 0 1rem;
+        width: 15rem;
     }
 </style>

@@ -5,6 +5,8 @@
           <div class="ms_container">
              <h2>Key for your success</h2>
              <p>EduPrime is the most versatile WordPress theme for educational purposes, showcasing universities, courses, secondary schools etc.</p>
+             <button class="ms_btn"><i class="fas fa-search"></i> Search courses</button>
+             <button class="ms_btn white-btn"><i class="fas fa-user-plus"></i> Apply for university</button>
           </div>
       </section>
       <!-- /BANNER -->
@@ -14,66 +16,82 @@
           <AppSectionText />
       </section>
 
+      <!-- SECTION CORSI   -->
       <section class="course-option">
           <div class="ms_container ms_mt text-center">
             <h2>Faculties available at EduPrime</h2>
             <p>A single university with a load of courses, tailored <br> to satisfy any student's needs. </p>
-            <ul class="course-card d-flex">
+          </div>
+          <div class="course-container">
+            <ul class="course-card d-flex ms_container">
                 <li v-for="(item, index) in imgCard" :key="index" class="d-flex flex-column">
                     <img :src="require(`../assets/${item.img}`)" alt="">
                     <small> {{item.text}} </small>
                 </li>
             </ul>
-            
+
           </div>
+            
       </section>
+      <!-- /SECTION CORSI   -->
 
       <section> 
           <AppSectionImg />
       </section>
 
+      <!-- SEZIONE TIMELINE   -->
       <section class="events ms_mt">
           <div class="ms_container">
               <div class="uni-graphic">
-                  <img class="icon" :src="require('../assets/Clock-and-Bell.png')" alt="">  
+                  <img class="icon" :src="require('../assets/Clock-and-Bell.png')" alt=""> <br>  
                   <h2>University Year</h2>  
                   <div class="timeline">
                       <div class="timeline-img">
                         <img :src="require('../assets/Timeline-Item.png')" alt="">                     
                       </div>
-                      <div class="timeline-text">
-                          
+                      <div class="first-text">
+                          <h5>Demo Classes</h5>
+                          <p>In the first week, students try to accommodate with the <br> teaching style and choose their optional courses.</p>
+                      </div>
+                      <div class="second-text">
+                          <h5>Graduation Day</h5>
+                          <p>On the day od graduation, all students gather for the ceremony and then network and party among others</p>
                       </div>
                   </div>
               </div>
 
+
+              <!-- CARD EVENTI   -->
               <div class="uni-events">
                   <img class="icon" :src="require('../assets/upcoming-events-calendar-icon.png')" alt="">
                   <h2>Upcoming Events</h2>
                   <div class="row">
                       <div class="col card" v-for="(item, index) in coachingCard" :key="index">
                           <h4> {{item.title}} </h4>
-                          <small> {{item.date}} </small>
+                          <small><i class="fas fa-calendar-alt"></i> {{item.date}} </small>
                           <p> {{item.text}} </p>
-                          <button class="ms_btn-red">Find More</button>
+                          <button class="ms_btn-red"><i class="fas fa-plus"></i> Find More</button>
                       </div>
                   </div>
                   <button class="ms_btn mt-4">View all Events</button>
               </div>
           </div>
       </section>
+      <!-- /SEZIONE TIMELINE   -->
 
+      <!-- SEZIONE ULTIMI CORSI    -->
       <section>
           <div class="ms_container ms_mt">
               <h3>Latest courses</h3>
               <div class="row">
-                  <div class="col course-card" v-for="(item, index) in courseCard" :key="index">
+                  <div class="col latest-card" v-for="(item, index) in latestCard" :key="index">
                       <img :src="require(`../assets/${item.img}`)" alt="">
                       <h5> {{item.text}} </h5>
-                      <p> {{item.teacher}} </p>
-                      <p> {{item.price}} </p>
+                      <small><i class="fas fa-user"></i> {{item.teacher}} </small> <br>
+                      <small><i class="fas fa-money-bill-alt"></i> {{item.price}} </small>
                   </div>
               </div>
+
 
               <div class="row m-3">
                   <div class="col">
@@ -100,6 +118,8 @@
               </div>
           </div>
       </section>
+      <!-- SEZIONE ULTIMI CORSI    -->
+
 
       <AppCta />
 
@@ -165,7 +185,7 @@ export default {
                     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor[...]"  
                 }
             ],
-            courseCard: [
+            latestCard: [
                 {
                     img: "Decisions-icon.png",
                     text: "Make Better Decisions",
@@ -209,6 +229,16 @@ export default {
         justify-content: center;
         align-items: center;
         text-align: center;
+
+        .ms_container {
+            z-index: 100;
+        }
+
+        .white-btn {
+            background-color: white;
+            color: #e56768;
+            margin-left: 1rem;
+        }
     }
 
     .first-banner::before {
@@ -223,10 +253,14 @@ export default {
     /* /SECTION 1 */
 
     /* SECTION 3 */
+    .course-container {
+        background-color: white;
+    }
+
     .course-card > li {
         padding: 1.4rem 2rem;
         font-size: .8rem;
-        border: 1px solid lightgrey;
+        border: 1px solid rgba(0, 0, 0, .1);
         color: #e56768;
     }
 
@@ -241,6 +275,33 @@ export default {
         background-color: #e56768;
         text-align: center;
         color: white;
+
+        .uni-graphic > h2 {
+            display: inline-block;
+            background-color: #db2a2c;
+        }
+    }
+
+    .timeline-img {
+        margin: 8rem 0;
+    }
+
+    .timeline {
+        position: relative;
+    }
+
+    .first-text {
+        position: absolute;
+        top: -65%;
+        left: 20%;
+        font-size: .8rem;
+    }
+
+    .second-text {
+        position: absolute;
+        top: -65%;
+        left: 65%;
+        font-size: .8rem;
     }
 
     .card {
@@ -254,22 +315,23 @@ export default {
 
         button {
             padding: .4rem .6rem;
-            width: 5rem;
+            width: 6rem;
             position: absolute;
             left: 35%;
             bottom: -15px;
-            box-shadow: 1px 1px 5px black;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, .1);
+            font-weight: 800;
         }
     }
     // SECTION 5
 
     // SECTION 6
-    .course-card {
-       border: 1px solid lightgray; 
+    .latest-card {
        text-align: center;
-       font-size: .6rem;
+       font-size: .8rem;
        margin: 1rem;
        padding: .8rem;
+       box-shadow: 0px 8px 15px rgba(0, 0, 0, .1);
 
        img {
            width: 3rem;
