@@ -4,6 +4,9 @@
             <div class="ms_container">
                 <h4>Subscribe Now to Our Newsletter</h4>
                 <input type="text" placeholder="Email address...">
+                <button class="btn rounded-pill ms-n5" type="button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
             </div>
         </div>
 
@@ -68,6 +71,23 @@ export default {
     h4 {
         color: white;
         display: inline-block;
+    }
+
+    input {
+        width: 15rem;
+        border: 0;
+        border-radius: 20px;
+        margin-left: 3rem;
+        padding: .6rem 1.5rem;
+        font-size: .8rem;
+    }
+
+    button {
+        background-color: #e9d758;
+        color: white
+    }
+    .ms-n5 {
+        margin-left: -40px;
     }
 }
 

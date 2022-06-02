@@ -28,6 +28,10 @@ body {
     font-weight: 800;
 }
 
+.ms_btn:hover {
+    background-color: #e56768;
+}
+
 .ms_btn-red {
     background-color: #e56768;
     border: #e56768;
@@ -35,6 +39,10 @@ body {
     border-radius: 20px;
     padding: .8rem 1.2rem;
     font-size: .7rem;
+}
+
+.ms_btn-red:hover {
+    background-color: #e9d758;
 }
 
 img {

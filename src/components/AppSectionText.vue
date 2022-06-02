@@ -27,4 +27,5 @@ export default {
 .col-img > img {
     padding: 3rem 0;
 }
+
 </style>

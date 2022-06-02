@@ -22,7 +22,7 @@
             <h2>Faculties available at EduPrime</h2>
             <p>A single university with a load of courses, tailored <br> to satisfy any student's needs. </p>
           </div>
-          <div class="course-container">
+          <div class="course-container d-flex justify-content-center">
             <ul class="course-card d-flex ms_container">
                 <li v-for="(item, index) in imgCard" :key="index" class="d-flex flex-column">
                     <img :src="require(`../assets/${item.img}`)" alt="">
@@ -239,6 +239,11 @@ export default {
             color: #e56768;
             margin-left: 1rem;
         }
+
+        .white-btn:hover {
+            background-color: #db2a2c;
+            color: white;
+        }
     }
 
     .first-banner::before {
@@ -249,6 +254,17 @@ export default {
         left: 0;
         width: 100%;
         height: 100%;
+    }
+
+    .first-banner::after {
+        content: "";
+        position: absolute;
+        bottom: -30%;
+        left: 0;
+        width: 100%;
+        height: 250px;
+        background: url(../assets/Wave-1.png);
+        background-repeat: no-repeat;
     }
     /* /SECTION 1 */
 
@@ -280,6 +296,10 @@ export default {
             display: inline-block;
             background-color: #db2a2c;
         }
+    }
+
+    .uni-events > button {
+        margin-bottom: 3rem;
     }
 
     .timeline-img {

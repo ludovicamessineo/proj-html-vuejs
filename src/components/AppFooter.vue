@@ -43,7 +43,10 @@
                             </ul>
                         </div>
                         <div class="col-8">
-
+                            <input type="text" placeholder="Search...">
+                            <button class="btn rounded-pill ms-n5" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -95,6 +98,23 @@ ul {
 
 li {
     font-size: .7rem;
+}
+
+.footer-right input {
+    width: 10rem;
+    border: 0;
+    border-radius: 20px;
+    margin-left: 3rem;
+    padding: .6rem 1.5rem;
+    font-size: .8rem;
+}
+
+button {
+    background-color: #e9d758;
+}
+
+.ms-n5 {
+    margin-left: -40px;
 }
 
 
